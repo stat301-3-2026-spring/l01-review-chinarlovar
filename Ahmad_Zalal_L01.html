@@ -2415,16 +2415,16 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>A supervised machine learning workflow generally follows these steps:</p>
 <ul>
-<li><strong>Define the problem:</strong> Identify the target variable and determine whether it is a regression or classification task.</li>
-<li><strong>Collect and explore data:</strong> Gather labeled data and perform exploratory data analysis (EDA) to understand distributions, missingness, and relationships.</li>
-<li><strong>Split the data:</strong> Divide the dataset into a training set and a test set (often using stratified sampling) to enable unbiased evaluation.</li>
-<li><strong>Preprocess/feature engineer:</strong> Create a recipe to handle missing values, encode categorical variables, normalize/scale features, and engineer new predictors as needed.</li>
-<li><strong>Specify models:</strong> Choose one or more model types (e.g., linear regression, random forest, boosted trees) and define any tunable hyperparameters.</li>
-<li><strong>Set up resampling:</strong> Use a resampling strategy such as v-fold cross-validation to estimate model performance on held-out data without touching the test set.</li>
-<li><strong>Tune hyperparameters:</strong> Use grid search or other tuning strategies to find the hyperparameter values that optimize performance on the resampling folds.</li>
-<li><strong>Select the final model:</strong> Compare candidate models using a chosen performance metric and select the best-performing configuration.</li>
-<li><strong>Fit the final model:</strong> Refit the chosen model on the entire training set using the optimal hyperparameters.</li>
-<li><strong>Evaluate on the test set:</strong> Assess the final model’s performance on the held-out test set to get an unbiased estimate of generalization error.</li>
+<li><p>Define the problem: Identify the target variable and determine whether it is a regression or classification task.</p></li>
+<li><p>Collect and explore data: Gather labeled data and perform EDA to identify distributions, missingness, and relationships.</p></li>
+<li><p>Split the data: Divide the dataset into a training set and a test set.</p></li>
+<li><p>Preprocess/feature engineer: Create a recipe to handle missing values, encode categorical variables, normalize/scale features, and engineer new predictors as needed.</p></li>
+<li><p>Specify models: Choose one or more model types (like linear regression, random forest, boosted trees) and define any tunable hyperparameters.</p></li>
+<li><p>Set up resampling: Use a resampling strategy such as v-fold cross-validation to estimate model performance on held-out data without touching the test set.</p></li>
+<li><p>Tune hyperparameters: Use grid search or other tuning strategies to find the hyperparameter values that optimize performance on the resampling folds.</p></li>
+<li><p>Select the final model: Compare candidate models using a chosen performance metric and select the best-performing configuration.</p></li>
+<li><p>Fit the final model: Refit the chosen model on the entire training set using the optimal hyperparameters.</p></li>
+<li><p>Evaluate on the test set: Assess the final model’s performance on the held-out test set to get an unbiased estimate of generalization error.</p></li>
 </ul>
 </div>
 </div>
@@ -2442,8 +2442,8 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In supervised learning, each observation in the training data has a known outcome (label), and the model learns a mapping from input features to that outcome. The goal is to make accurate predictions on new, unseen data. Examples include predicting house prices (regression) or classifying emails as spam (classification).</p>
-<p>In unsupervised learning, there is no labeled outcome. Instead, the algorithm tries to discover hidden structure or patterns in the data on its own. Common tasks include clustering (grouping similar observations) and dimensionality reduction (e.g., PCA). Because there is no ground truth to learn from, evaluating unsupervised models is less straightforward than in the supervised setting.</p>
+<p>In supervised learning, each observation in the training data has a known outcome that we define and the model learns a mapping to that outcome. The goal is to make accurate predictions on new, unseen data. Examples include predicting house prices (regression) or classifying emails as spam (classification).</p>
+<p>In unsupervised learning, there is no explicitly defined outcome. Instead, the model/methods try to discover hidden structure or patterns in the data on its own. Common tasks include clustering (grouping similar observations and because there is no ground truth to learn from, evaluating unsupervised models is less straightforward than in the supervised setting.</p>
 </div>
 </div>
 </section>
@@ -2462,7 +2462,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Descriptive models aim to summarize or characterize patterns that already exist in the data. The goal is not to make predictions or draw causal conclusions, but to visualize or describe trends, relationships, or structures. A smoothing line on a scatterplot is a classic example — it describes the overall trend without asserting a causal mechanism.</p>
+<p>Descriptive models aim to summarize or characterize patterns that already exist in the data. The goal is not to make predictions or draw causal conclusions, but to visualize or describe trends, relationships, or structures. A smoothing line on a scatterplot is a classic example; it describes the overall trend without asserting a causal mechanism.</p>
 </div>
 </div>
 </section>
@@ -2478,7 +2478,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Inferential models are used to test hypotheses and draw conclusions about relationships between variables in the broader population from which the data were sampled. The emphasis is on understanding whether a predictor has a statistically significant association with the outcome and quantifying the uncertainty of that relationship (e.g., via confidence intervals or p-values). Interpretability and valid inference are prioritized over raw predictive accuracy.</p>
+<p>Inferential models are used to test hypotheses and draw conclusions about relationships between variables in the broader population from which the data were sampled. The emphasis is on understanding whether a predictor has a statistically significant association with the outcome and quantifying the uncertainty of that relationship (e.g., via confidence intervals or p-values). Interpretability and valid inference tend to be prioritized over raw predictive accuracy.</p>
 </div>
 </div>
 </section>
@@ -2494,7 +2494,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Predictive models are built with the primary goal of generating accurate predictions for new, unseen observations. The focus is on minimizing prediction error rather than on explaining or interpreting the role of individual predictors. A model that produces the most accurate forecasts is preferred, even if its internal workings are complex or difficult to interpret (e.g., a boosted tree ensemble).</p>
+<p>Predictive models are built with the primary goal of obtaining accurate predictions for new, unseen observations. The focus is on minimizing prediction error rather than on explaining or interpreting the role of individual predictors. A model that produces the most accurate forecasts is preferred.</p>
 </div>
 </div>
 </section>
@@ -2515,7 +2515,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A mechanistic model is built on an assumed functional form or theoretical structure that describes how the predictors relate to the outcome. The model’s form is specified in advance (before seeing the data), and the data are used to estimate the parameters of that fixed structure. Linear regression is a canonical example: we assume the relationship between predictors and the outcome is linear, and we estimate the slope and intercept coefficients from the data.</p>
+<p>A mechanistic model is built on an assumed functional form or theoretical structure. The model’s form is specified in advance (before seeing the data), and the data are used to estimate the parameters of that fixed structure. Linear regression is a good example since in it, we assume the relationship between predictors and the outcome is linear, and we estimate the slope and intercept coefficients from the data.</p>
 </div>
 </div>
 </section>
@@ -2532,7 +2532,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An empirically driven model does not impose a pre-specified functional form. Instead, it learns the structure of the relationship directly from the data, allowing the data to “speak for themselves.” These models are highly flexible and can capture complex, nonlinear patterns without requiring the analyst to specify the relationship in advance. Examples include k-nearest neighbors, decision trees, and neural networks.</p>
+<p>An empirically driven model does not impose a pre-specified functional form. Instead, it learns the structure of the relationship directly from the data, allowing the data to define the relationship. These models are highly flexible and can capture complex, nonlinear patterns without requiring the analyst to specify the relationship in advance. Examples include k-nearest neighbors, decision trees, and neural networks.</p>
 </div>
 </div>
 </section>
@@ -2549,7 +2549,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The two sets of terminology map closely onto each other. Mechanistic models are generally parametric — they assume a fixed functional form with a finite set of parameters (e.g., <span class="math inline">\(\beta_0, \beta_1, \ldots\)</span> in linear regression), and fitting the model means estimating those parameters. Empirically driven models are generally nonparametric — they do not assume a fixed form, so the effective number of parameters can grow with the data. The key distinction in both cases is whether the model’s structure is predetermined or learned freely from the data.</p>
+<p>The two sets of terminology are close to each other. Mechanistic models are generally parametric; they assume a fixed functional form with a finite set of parameters (e.g., <span class="math inline">\(\beta_0, \beta_1, ...\)</span> in linear regression), and fitting the model means estimating those parameters. Empirically driven models are generally nonparametric; they do not assume a fixed form, so the effective number of parameters can grow with the data. The key distinction in both cases is whether the model’s structure is predetermined or learned freely from the data.</p>
 </div>
 </div>
 </section>
@@ -2566,7 +2566,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Mechanistic (parametric) models are generally easier to interpret. Because the functional form is fixed and simple (e.g., a linear equation), each coefficient has a clear, direct interpretation — it represents the change in the outcome associated with a one-unit change in that predictor, holding others constant. Empirically driven models, by contrast, can learn highly complex, nonlinear decision boundaries that are difficult to summarize in plain terms, making them harder to explain to stakeholders or use for inference.</p>
+<p>Mechanistic (parametric) models are generally easier to interpret. Because the functional form is fixed and simple (e.g., a linear equation), each coefficient has a clear, direct interpretation; it represents the change in the outcome associated with a one-unit change in that predictor, holding others constant. Empirically driven models, by contrast, can learn highly complex, nonlinear decision boundaries that are difficult to summarize in plain terms, making them harder to explain to people like stakeholders or use for inference.</p>
 </div>
 </div>
 </section>
@@ -2583,7 +2583,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Empirically driven models are generally more flexible than mechanistic ones. Because they do not impose a pre-specified functional form, they can adapt to a much wider variety of patterns in the data, including complex nonlinearities and interactions. Mechanistic models are less flexible — their structure is constrained by the assumed form, which limits the kinds of relationships they can capture. Greater flexibility is not always better, however, as it also increases the risk of overfitting.</p>
+<p>Empirically driven models are generally more flexible than mechanistic ones. Because they do not impose a pre-specified functional form, they can adapt to a much wider variety of patterns in the data, including complex nonlinearities and interactions. Mechanistic models are less flexible; their structure is constrained by the assumed form, which limits the kinds of relationships they can capture. Greater flexibility is not always better as it also increases the risk of overfitting.</p>
 </div>
 </div>
 </section>
@@ -2602,10 +2602,10 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>The bias-variance trade-off describes a fundamental tension in model selection:</p>
 <ul>
-<li><p>Mechanistic (parametric) models** tend to have **higher bias and lower variance. Because they impose a rigid functional form, they may systematically miss the true relationship in the data (bias). However, since the form is fixed, their predictions tend not to change drastically across different training samples (low variance).</p></li>
-<li><p>Empirically driven (nonparametric) models tend to have lower bias and higher variance. They are flexible enough to approximate the true relationship closely (low bias), but because they fit the data so closely, small changes in the training set can lead to very different models (high variance), which is the hallmark of overfitting.</p></li>
+<li><p>Mechanistic models tend to have higher bias and lower variance. Because they impose a rigid functional form, they may systematically miss the true relationship in the data (bias). However, since the form is fixed, their predictions tend not to change drastically across different training samples (low variance).</p></li>
+<li><p>Empirically driven models tend to have lower bias and higher variance. They are flexible enough to approximate the true relationship closely (low bias), but because they fit the data so closely, small changes in the training set can lead to very different models (high variance), which is the usual sign of overfitting.</p></li>
 </ul>
-<p>The goal in practice is to find the right balance — a model flexible enough to capture the true signal, but not so flexible that it fits the noise.</p>
+<p>The goal in practice is to find the right balance; a model flexible enough to capture the true signal, but not so flexible that it fits the noise.</p>
 </div>
 </div>
 </section>
@@ -2625,8 +2625,8 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p>The distinction comes down to the type of outcome being predicted:</p>
 <ul>
-<li><p>Regression problems involve predicting a continuous, numeric outcome. For example, predicting a home’s sale price, a patient’s blood pressure, or tomorrow’s temperature. Performance is typically measured with metrics like RMSE or MAE.</p></li>
-<li><p>Classification problems involve predicting a categorical outcome — which class or group an observation belongs to. For example, predicting whether an email is spam or not, or which of several species a plant belongs to. Performance is typically measured with metrics like accuracy, ROC-AUC, or sensitivity/specificity.</p></li>
+<li><p>Regression problems involve predicting a continuous, numeric outcome. For example, predicting a home’s sale price, a patient’s blood pressure, or tomorrow’s temperature.</p></li>
+<li><p>Classification problems involve predicting a categorical outcome: which class or group an observation belongs to. For example, predicting whether an email is spam or not, or which of several species a plant belongs to.</p></li>
 </ul>
 </div>
 </div>
@@ -2661,8 +2661,8 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In v-fold cross-validation, the training data are randomly partitioned into <span class="math inline">\(v\)</span> roughly equal folds. The model is fit <span class="math inline">\(v\)</span> times: each time, one fold is held out as the validation set and the remaining <span class="math inline">\(v-1\)</span> folds are used for training. The RMSE is computed on each held-out fold, and the <span class="math inline">\(v\)</span> estimates are averaged to produce an overall estimate of test RMSE.</p>
-<p>With repeats, this entire process is performed multiple times (e.g., 5 or 10 repeats), each time with a different random partitioning. The RMSE is then averaged across all folds and all repeats, yielding a more stable and less variable estimate.</p>
+<p>In v-fold cross-validation, the training data is randomly partitioned into v roughly equal folds. The model is fit v times: each time, one fold is held out as the validation set and the remaining v-1 folds are used for training. The RMSE is computed on each held-out fold, and the v estimates are averaged to produce an overall estimate of test RMSE.</p>
+<p>With repeats, this entire process is performed multiple times (commonly 5 or 10 repeats), each time with a different random partitioning. The RMSE is then averaged across all folds and all repeats, yielding a more stable and less variable estimate.</p>
 <p>We use cross-validation because it allows us to estimate how well the model will generalize to new data without touching the test set. Using the test set for model selection or tuning would lead to an optimistic and biased estimate of true performance. Cross-validation gives us a principled way to compare models and tune hyperparameters using only the training data.</p>
 </div>
 </div>
@@ -2680,8 +2680,8 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Bootstrap resampling is preferred over v-fold cross-validation in situations where the dataset is very small. In bootstrap resampling, each resample is drawn with replacement from the training data (same size as the original), and the observations not selected (the “out-of-bag” observations, roughly 63% of the data on average) serve as the validation set. This is repeated many times.</p>
-<p>Because the bootstrap generates many resamples and uses a larger fraction of data for validation in each iteration than a single fold would in small-data settings, it can produce more stable RMSE estimates when <span class="math inline">\(n\)</span> is too small for cross-validation to be reliable. The trade-off is that bootstrap estimates can have some pessimistic bias, since the training and out-of-bag sets share the same pool of observations.</p>
+<p>Bootstrap resampling is preferred over v-fold cross-validation in situations where the dataset is very small. In bootstrap resampling, each resample is drawn with replacement from the training data (same size as the original), and the observations not selected serve as the validation set.</p>
+<p>Because the bootstrap generates many resamples and uses a larger fraction of data for validation in each iteration than a single fold would in small-data settings, it can produce more stable RMSE estimates when n is too small for cross-validation to be reliable. The trade-off is that bootstrap estimates can have some pessimistic bias, since the training and non-training sets share the same pool of observations.</p>
 </div>
 </div>
 </section>
@@ -2698,7 +2698,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Model tuning is the process of selecting the optimal values for a model’s <strong>hyperparameters</strong> — parameters that are not learned directly from the data during fitting, but rather set by the analyst before training (e.g., the number of trees in a random forest, the penalty <span class="math inline">\(\lambda\)</span> in regularized regression, or the depth of a decision tree).</p>
+<p>Model tuning is the process of selecting the optimal values for a model’s hyperparameters: parameters that are not learned directly from the data during fitting, but rather set by the analyst before training (e.g., the number of trees in a random forest, the penalty <span class="math inline">\(\lambda\)</span> in regularized regression, or the depth of a decision tree).</p>
 <p>We tune because the right hyperparameter values can make a substantial difference in predictive performance. The typical approach is to define a grid (or use random/iterative search) of candidate hyperparameter values, evaluate each candidate using cross-validation on the training data, and select the values that minimize the estimated test error. This is done entirely within the training set to avoid leaking information from the test set.</p>
 </div>
 </div>
@@ -2719,7 +2719,7 @@ window.Quarto = {
 <p>Two common regression performance metrics are:</p>
 <ol type="1">
 <li><p>Root Mean Squared Error (RMSE): The square root of the average squared difference between predicted and actual values. It is on the same scale as the outcome and penalizes large errors more heavily than small ones.</p></li>
-<li><p>R-squared (<span class="math inline">\(R^2\)</span>): The proportion of variance in the outcome explained by the model. It ranges from 0 to 1, with values closer to 1 indicating better fit.</p></li>
+<li><p>R-squared (R^2): The proportion of variance in the outcome explained by the model. It ranges from 0 to 1, with values closer to 1 indicating better fit.</p></li>
 </ol>
 </div>
 </div>
@@ -2737,7 +2737,7 @@ window.Quarto = {
 <p>Two common classification performance metrics are:</p>
 <ol type="1">
 <li><p>Accuracy: The proportion of observations correctly classified. Simple to interpret, but can be misleading when classes are imbalanced.</p></li>
-<li><p>ROC-AUC (Area Under the Receiver Operating Characteristic Curve): Measures the model’s ability to discriminate between classes across all possible classification thresholds. A value of 0.5 indicates no discrimination (random guessing) and 1.0 indicates perfect discrimination. It is more robust than accuracy when classes are imbalanced.</p></li>
+<li><p>ROC-AUC (Area Under the Receiver Operating Characteristic Curve): Measures the model’s ability to distinguish between classes across all possible classification thresholds. A value of 0.5 indicates no discrimination (random guessing) and 1.0 indicates perfect discrimination. It is more robust than accuracy when classes are imbalanced.</p></li>
 </ol>
 </div>
 </div>
@@ -2759,7 +2759,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is an inferential problem. The company is asking whether a specific variable — number of service calls — has a meaningful relationship with churn. The focus is on understanding and quantifying that association (and its statistical significance), not on generating predictions for individual customers. This framing is characteristic of inference: testing a hypothesis about the role of a predictor.</p>
+<p>This is an inferential problem. The company is asking whether a specific variable, number of service calls, has a meaningful relationship with churn. The focus is on understanding and quantifying that association (and its statistical significance), not on generating predictions for individual customers.</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -2775,7 +2775,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a prediction problem. The company wants to estimate the probability of churn for individual customers, which they could use to proactively target at-risk subscribers with retention offers. The goal is accurate probability estimation for future observations, not understanding which features drive churn or why. This is the defining characteristic of a predictive task.</p>
+<p>This is a prediction problem. The company wants to estimate the probability of churn for individual customers, which they could use to proactively target at-risk subscribers with retention offers. The goal is accurate probability estimation for future observations, not understanding which features drive churn or why.</p>
 </div>
 </div>
 </section>
